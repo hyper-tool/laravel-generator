@@ -3,7 +3,7 @@
 namespace OrganizationName;
 
 use Illuminate\Support\ServiceProvider;
-use OrganizationName\Make\Commands\ProjectName;
+use OrganizationName\ProjectName\Commands\ProjectName;
 
 class OrganizationName extends ServiceProvider
 {
@@ -30,7 +30,7 @@ class OrganizationName extends ServiceProvider
     public function register()
     {
         $this->app->singleton('make.OrganizationName', function ($app) {
-            return new Framework($app);
+            return new ProjectName($app);
         });
         $this->commands([
                             'make.OrganizationName',
