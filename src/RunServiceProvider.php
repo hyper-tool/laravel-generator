@@ -1,11 +1,11 @@
 <?php
 
-namespace OrganizationName;
+namespace OrganizationName\ProjectName;
 
 use Illuminate\Support\ServiceProvider;
-use OrganizationName\ProjectName\Commands\ProjectName;
+use OrganizationName\ProjectName\Commands\Features;
 
-class OrganizationName extends ServiceProvider
+class RunServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -30,7 +30,7 @@ class OrganizationName extends ServiceProvider
     public function register()
     {
         $this->app->singleton('make.OrganizationName', function ($app) {
-            return new ProjectName($app);
+            return new Features($app);
         });
         $this->commands([
                             'make.OrganizationName',

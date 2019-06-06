@@ -3,23 +3,23 @@
 namespace OrganizationName\ProjectName\Commands;
 
 use Illuminate\Console\Command;
-use OrganizationName\ProjectName\Controllers\ProjectNameController;
+use OrganizationName\ProjectName\Controllers\FeaturesController;
 
 /**
  * Class Framework
  * @package App\Console\Commands
  */
-class ProjectName extends Command
+class Features extends Command
 {
     /**
      * @var string
      */
-    protected $signature = 'make:ProjectName';
+    protected $signature = 'make:Features';
 
     /**
      * @var string
      */
-    protected $description = 'ProjectName description';
+    protected $description = 'Features description';
 
     /**
      * ProjectName constructor.
@@ -34,7 +34,7 @@ class ProjectName extends Command
      */
     public function handle()
     {
-        (new ProjectNameController())->handle();
+        (new FeaturesController())->handle();
     }
 
 
