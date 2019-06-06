@@ -1,0 +1,41 @@
+{
+    "name": "organization_name/project_name",
+    "description": "organization_name project_name",
+    "keywords": [
+        "laravel",
+        "organization_name",
+        "project_name"
+    ],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Ben Huang",
+            "email": "benhuang1024@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/support": "5.5.*",
+        "illuminate/console": "5.5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "OrganizationName\\ProjectName\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OrganizationName\\ProjectName\\RunServiceProvider"
+            ]
+        }
+    }
+}
